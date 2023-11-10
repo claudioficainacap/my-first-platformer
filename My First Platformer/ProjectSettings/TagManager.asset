@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Fondo
+    uniqueID: 3041447813
+    locked: 0
+  - name: Deco Fondo
+    uniqueID: 2632124661
+    locked: 0
+  - name: Entidades
+    uniqueID: 1529713271
+    locked: 0
+  - name: Deco Frente
+    uniqueID: 1160971915
+    locked: 0
+  - name: Terreno
+    uniqueID: 200732553
     locked: 0
