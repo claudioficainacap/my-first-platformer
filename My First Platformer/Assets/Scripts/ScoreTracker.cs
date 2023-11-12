@@ -7,6 +7,10 @@ public class ScoreTracker : MonoBehaviour
 {
 
     public static ScoreTracker instance;
+
+    public TMPro.TextMeshProUGUI uiPuntaje;
+    public TMPro.TextMeshProUGUI uiVidas;
+
     [SerializeField] private int score;
     [SerializeField] private int lifes;
 
@@ -16,6 +20,12 @@ public class ScoreTracker : MonoBehaviour
         instance = this;
 
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    private void Update()
+    {
+        uiPuntaje.text = score.ToString();
+        uiVidas.text = lifes.ToString();
     }
 
     public int getScore() { return score; }
