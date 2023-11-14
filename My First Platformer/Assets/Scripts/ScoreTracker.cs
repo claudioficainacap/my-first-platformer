@@ -38,6 +38,7 @@ public class ScoreTracker : MonoBehaviour
     {
         lifes -= amount;
 
+
         if (lifes <= 0)
         {
             gameOver();
@@ -46,6 +47,7 @@ public class ScoreTracker : MonoBehaviour
 
     public void gameOver()
     {
+
         SceneManager.LoadScene("Game Over");
     }
 }
