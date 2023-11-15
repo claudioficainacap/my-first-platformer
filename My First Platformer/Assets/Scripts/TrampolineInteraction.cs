@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Trampolin : MonoBehaviour
 {
-    public Animator animator;
+    
 
     public float jumpForce = 2f;
 
@@ -13,7 +13,7 @@ public class Trampolin : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<Rigidbody2D>().velocity = (Vector2.up * jumpForce);
-            animator.Play("JumpTrampolin");
+            
         }
     }
 }
