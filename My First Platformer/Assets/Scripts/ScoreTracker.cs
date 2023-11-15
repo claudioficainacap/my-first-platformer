@@ -14,6 +14,8 @@ public class ScoreTracker : MonoBehaviour
     [SerializeField] private int score;
     [SerializeField] private int lifes;
 
+    private int puntajeDeVictoria = 150;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -26,6 +28,11 @@ public class ScoreTracker : MonoBehaviour
     {
         uiPuntaje.text = score.ToString();
         uiVidas.text = lifes.ToString();
+
+        if (score >= puntajeDeVictoria)
+        {
+            gameWon(); // Agregado para la victoria
+        }
     }
 
     public int getScore() { return score; }
@@ -45,6 +52,10 @@ public class ScoreTracker : MonoBehaviour
         }
     }
 
+    public void gameWon()
+    {
+        SceneManager.LoadScene("Victoria"); // Agregado para la victoria
+    }
     public void gameOver()
     {
 
